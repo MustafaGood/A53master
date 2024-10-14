@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kino.nu - Boka biljetter</title>
+    <link rel="stylesheet" href="style/style.CSS">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Kino.nu</div>
+        <nav>
+            <a href="#filmer">Filmer</a>
+            <a href="#biljetter">Biljetter</a>
+            <a href="#biografer">Biografer</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Boka Biljetter</h1>
+        <div id="movie-image-container">
+            <img src="bilden/placeholder.png" alt="Filmens affisch" id="movie-image">
+        </div>
+        <div id="screenings-list">
+            <label for="screeningSelect">Välj filmvisning:</label>
+            <select id="screeningSelect" name="screeningSelect">
+                <option value="">Vänligen välj en filmvisning</option>
+            </select>
+        </div>
+
+        <form id="booking-form">
+            <label for="movieSelect">Välj film:</label>
+            <select id="movieSelect" name="movie">
+                <option value="">Vänligen välj en film</option>
+                <option value="squid-game-2">Squid Game 2</option>
+                <option value="the-dark-knight">The Dark Knight</option>
+                <option value="joker">Joker</option>
+            </select>
+
+            <label for="date">Välj datum:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="timeSelect">Välj tid:</label>
+            <input type="time" id="timeSelect" name="timeSelect" required>
+
+            <label for="quantity">Antal biljetter:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <h2>Kontaktuppgifter</h2>
+            <label for="name">Namn:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-post:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <h2>Betalningsinformation</h2>
+            <label for="card-number">Kortnummer:</label>
+            <input type="text" id="card-number" name="card-number" pattern="\d*" required>
+
+            <label for="expiry">Utgångsdatum:</label>
+            <input type="month" id="expiry" name="expiry" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="password" id="cvv" name="cvv" maxlength="3" required>
+
+            <button type="submit">Boka Nu</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

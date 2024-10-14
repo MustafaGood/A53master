@@ -1,0 +1,19 @@
+{
+  "name": "ny-mapp",
+  "version": "1.0.0",
+  "main": "screenings.test.js",
+  "scripts": {
+    "start": "http-server .",
+    "test": "jest",
+    "build": "echo 'Building project...'"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
