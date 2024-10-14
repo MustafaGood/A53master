@@ -8,16 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         switch(selectedMovie) {
             case 'squid-game-2':
-                movieImage.src = 'bilden/squidgames.jpg'; 
+                movieImage.src = 'squidgames.jpg'; 
                 break;
             case 'the-dark-knight':
-                movieImage.src = 'bilden/batman.jpg'; 
+                movieImage.src = 'batman.jpg'; 
                 break;
             case 'joker':
-                movieImage.src = 'bilden/joker.jpg'; 
+                movieImage.src = 'joker.jpg'; 
                 break;
             default:
-                movieImage.src = 'bilden/placeholder.png';
+                movieImage.src = 'placeholder.png';
         }
     });
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 movieImage.src = 'joker.jpg'; 
                 break;
             default:
-                movieImage.src = 'bilden/placeholder.png';
+                movieImage.src = 'placeholder.png';
         }
 
         const dateTime = new Date(movieTime);
