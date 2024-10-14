@@ -1,49 +1,49 @@
 document.addEventListener("DOMContentLoaded", () => {
     const screeningSelect = document.getElementById('screeningSelect');
-    const movieImage = document.getElementById('movie-image'); 
+    const movieImage = document.getElementById('movie-image');
     const movieSelect = document.getElementById('movieSelect');
 
-    movieSelect.addEventListener('change', function() {
+    movieSelect.addEventListener('change', function () {
         const selectedMovie = this.value;
 
-        switch(selectedMovie) {
+        switch (selectedMovie) {
             case 'squid-game-2':
-                movieImage.src = 'squidgames.jpg'; 
+                movieImage.src = 'squidgames.jpg';
                 break;
             case 'the-dark-knight':
-                movieImage.src = 'batman.jpg'; 
+                movieImage.src = 'batman.jpg';
                 break;
             case 'joker':
-                movieImage.src = 'joker.jpg'; 
+                movieImage.src = 'joker.jpg';
                 break;
             default:
                 movieImage.src = 'placeholder.png';
         }
     });
 
-    screeningSelect.addEventListener('change', function() {
+    screeningSelect.addEventListener('change', function () {
         const selectedOption = this.value.split('|');
         const movieTitle = selectedOption[0];
         const movieTime = selectedOption[1];
 
         movieSelect.value = movieTitle;
 
-        switch(movieTitle) {
+        switch (movieTitle) {
             case 'squid-game-2':
-                movieImage.src = 'squidgames.jpg'; 
+                movieImage.src = 'squidgames.jpg';
                 break;
             case 'the-dark-knight':
-                movieImage.src = 'batman.jpg'; 
+                movieImage.src = 'batman.jpg';
                 break;
             case 'joker':
-                movieImage.src = 'joker.jpg'; 
+                movieImage.src = 'joker.jpg';
                 break;
             default:
                 movieImage.src = 'placeholder.png';
         }
 
         const dateTime = new Date(movieTime);
-        document.getElementById('date').value = dateTime.toISOString().split('T')[0]; 
+        document.getElementById('date').value = dateTime.toISOString().split('T')[0];
         document.getElementById('timeSelect').value = dateTime.toTimeString().split(' ')[0];
     });
 
